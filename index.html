@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+<div>
+<center><div id="kmeans">
+<div><span><svg></svg></span></div>
+<div class="main">
+<div><label for="N">Enter the number of data points:</label><input type="number" id="N" min="2" max="250" value="250"></div>
+<div><label for="K">Enter the number of clusters:</label><input type="number" id="K" min="2" max="50" value="10"></div>
+
+<div><button class="button1" id="reset">New</button>
+    <button  class = "button2"id="start" onclick="start()">Start</button> 
+    <button  class = "button3" id="restart" >Restart</button>
+    <button  class = "button4" id="stop">Stop</button>
+    
+    
+
+
+</div>
+
+</div>
+</center>
+</div>
+    </div>
+<div id="modalOverlay">
+		<div class="modalPopup">
+			<div class="headerBar">
+				<h1>K Means Visualizer</h1>
+			</div>
+			<div class="modalContent">
+					<h1>Welcome</h1>
+					 <p>K-means algorithm is an iterative algorithm that tries to partition the dataset into K pre-defined distinct non-overlapping subgroups (clusters) where each data point belongs to only one group. Read more about K-means on <a target="_blank" href="https://en.wikipedia.org/wiki/K-means_clustering">Wikipedia</a></p>
+                    <p>
+                <h3>How to run the Visualizer </h3>
+                    </p>
+                    <ul>
+                        <li>Specify the number of data points and clusters points in appropriate text boxes. </li>
+                        <li>Press the New button to generate new data and clusters.</li>
+                        <li>Press the Start button to start the visualizer.</li>
+                        <li>Press Stop to stop the visualizer at any given time.</li>
+                        <li>Press Restart to start the visualization from beginning.</li>
+                    </ul>
+            <center><button class="buttonStyle" id="button">Close</button></center>
+			</div>
+		</div>
+	</div>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="k-means.js"></script>
+<script>
+window.onload = function() {
+  document.getElementById('button').onclick = function() {
+    document.getElementById('modalOverlay').style.display = 'none'
+  };
+};    
+    
+    </script>
+</body>
